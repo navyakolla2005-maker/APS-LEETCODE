@@ -1,0 +1,21 @@
+class Solution {
+    
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        java.util.HashSet<Integer> set = new java.util.HashSet<>();
+        
+        for (int i = 0; i < nums.length; i++) {
+            
+            // Remove element outside window size k
+            if (i > k) {
+                set.remove(nums[i - k - 1]);
+            }
+            
+            // Check duplicate
+            if (!set.add(nums[i])) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+}
