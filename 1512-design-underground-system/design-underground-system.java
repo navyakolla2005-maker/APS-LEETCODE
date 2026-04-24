@@ -1,4 +1,3 @@
-
 class UndergroundSystem {
     private Map<Integer, CheckInInfo> checkIns;
     private Map<String, TravelInfo> travelTimes;
